@@ -2,5 +2,13 @@
 src = "src"
 out = "out"
 libs = ["lib"]
+remappings = ["@chainlink/contracts=lib/chainlink-brownie-contracts/contracts"]
+# allow running shell scripts in foundry ATTENTION!
+# This allows foundry to run commands on your machine!
+# KEEP OFF AS LONG AS POSSIBLE!
+# required for DevOpsTools
+ffi = true
+# also required for DevOpsTools
+fs_permissions = [{ access = "read", path = "./broadcast/"}]
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
